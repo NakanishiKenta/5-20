@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="Shift-JIS"> 
+	<title>スロットゲーム</title>
+<style>
+p{
+	text-align: center;
+}
+input {
+	font-size:50px;
+	margin: 0px 0px 20px 0px;
+	padding: 0px 30px 0px 30px;
+	border-radius:8px;
+}
+</style>
+<script>
+function setImage(id) {
+
+	//ランダムで画像を変える
+	var images =["f1.png","f2.png","f3.png","f4.png","f5.png"];
+	var i = parseInt(Math.random() * 5);
+
+
+	//画像の変更
+	document.getElementById(id).src = images[i]
+}
+
+</script>
+</head>
+<body>
+<p>
+	<input type="button" value="!" onClick="setImage('img1')">
+	<input type="button" value="!" onClick="setImage('img2')">
+	<input type="button" value="!" onClick="setImage('img3')">
+	<br>
+	<img src="f0.png" id="img1">
+	<img src="f0.png" id="img2">
+	<img src="f0.png" id="img3">
+</p>
+</body>
+</html>
